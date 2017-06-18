@@ -17,7 +17,6 @@ shell-server@0.2.3            # Server-side component of the `meteor shell` comm
 
 angular2-compilers
 accounts-ui
-msavin:jetsetter
 accounts-password
 accounts-facebook
 accounts-google
@@ -25,3 +24,5 @@ accounts-weibo
 useraccounts:core
 useraccounts:unstyled
 service-configuration
+fortawesome:fontawesome
+meteortoys:allthings
