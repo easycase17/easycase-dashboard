@@ -9,14 +9,14 @@ import { ROUTES } from './app.routes';
 
 import { ErrorComponent } from './error/error.component';
 import { LayoutModule } from './layout/layout.module';
-import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
  
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
     LayoutModule,
-    AdminModule,
+    AuthModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
     NgbModule.forRoot()
   ],

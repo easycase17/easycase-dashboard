@@ -3,15 +3,15 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { Admin } from './admin.component';
+import { Auth } from './auth.component';
 
 export const routes = [
-  { path: '', component: Admin, pathMatch: 'full' }
+  { path: '', component: Auth, pathMatch: 'full' }
 ];
 
 @NgModule({
   declarations: [
-    Admin
+    Auth
   ],
   imports: [
     CommonModule,
@@ -19,6 +19,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ]
 })
-export class AdminModule {
+export class AuthModule {
   static routes = routes;
 }

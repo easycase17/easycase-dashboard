@@ -1,17 +1,17 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Users } from '../../../../imports/api/users';
-import template from './admin.template.html';
-import style from './admin.style.scss';
+import template from './auth.template.html';
+import style from './auth.style.scss';
 
 @Component({
-    selector: 'admin',
+    selector: 'Auth',
     template,
     // styles: [ style ],
     // styles: [ style ],
     encapsulation: ViewEncapsulation.None
 })
-export class Admin {
+export class Auth {
     router: Router;
 
     constructor(router: Router) {
@@ -20,10 +20,8 @@ export class Admin {
 
     loginWithFacebook() {
         Meteor.loginWithFacebook(
-            {
-                requestPermissions: ['public_profile', 'email']
-            }, 
-            function(err) {
+            {},
+            (err) => {
                 if (err) {
                     console.log('Handle errors here: ', err);
                 }

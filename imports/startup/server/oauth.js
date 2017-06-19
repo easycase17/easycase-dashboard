@@ -9,7 +9,14 @@ configureFacebook = function(config) {
         service: "facebook",
         loginStyle: "popup",
         appId: config.clientId,
-        secret: config.secret
+        secret: config.secret,
+        requestPermissions: [
+            'public_profile', 
+            'email',
+            'user_friends', 
+            'user_photos',
+            'user_education_history'
+        ]
     });
 };
 
