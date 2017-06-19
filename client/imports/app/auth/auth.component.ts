@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { Users } from '../../../../imports/api/users';
 import template from './auth.template.html';
 import style from './auth.style.scss';
 
@@ -19,12 +18,23 @@ export class Auth {
     }
 
     loginWithFacebook() {
-        Meteor.loginWithFacebook(
-            {},
-            (err) => {
-                if (err) {
-                    console.log('Handle errors here: ', err);
+        new Promise(() => {
+            Meteor.loginWithFacebook({
+                requestPermissions: [
+                    'public_profile',
+                    'email',
+                    'user_friends',
+                    'user_photos',
+                    'user_education_history'
+                ]},
+                (err, user) => {
+                    if (err) {
+                        console.log('Handle errors here: ', err);
+                    }
+                    console.log(user);
                 }
-            });
+            );
+
+        });
     }
 }
