@@ -4,7 +4,6 @@ import 'reflect-metadata';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Meteor } from 'meteor/meteor';
 import { AppModule } from './imports/app/app.module';
-import { Users } from '../imports/api/users';
  
 Meteor.startup(() => {
   platformBrowserDynamic().bootstrapModule(AppModule);
