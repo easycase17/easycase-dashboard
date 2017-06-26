@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
+import { configureFacebook, configureGoogle } from '../../../meteor/server/imports/startup/service-config.js';
 
 @Component({
   selector: 'login',
@@ -15,6 +16,24 @@ export class Login {
   private user: string;
   private password: string;
   constructor() {
+    
+    // @FIXME: Need to find a safe way to set the oauth services
+    // /**
+    //  * Set up account services
+    //  */
+    // var facebookConfig = Meteor.settings.private.oauth.facebook;
+    // var googleConfig = Meteor.settings.private.oauth.google;
+
+    // console.log('---------- Account Service Configuration ----------');
+    // if (facebookConfig) {
+    //     console.log('Got settings for facebook', facebookConfig)
+    //     configureFacebook(facebookConfig);
+    // }
+
+    // if (googleConfig) {
+    //     console.log('Got settings for google', googleConfig)
+    //     configureGoogle(googleConfig);
+    // }
   }
 
   loginWithPassword() {

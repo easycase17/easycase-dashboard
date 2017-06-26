@@ -37,16 +37,3 @@ configureGoogle = function(config) {
         ]
     });
 };
-
-var facebookConfig = Meteor.settings.private.oauth.facebook;
-var googleConfig = Meteor.settings.private.oauth.google;
-
-if(facebookConfig) {
-    console.log('Got settings for facebook', facebookConfig)
-    configureFacebook(facebookConfig);
-}
-
-if(googleConfig) {
-    console.log('Got settings for google', googleConfig)
-    configureGoogle(googleConfig);
-}
