@@ -1,4 +1,6 @@
-import { Main } from "./imports/server-main/main";
+import { Meteor } from 'meteor/meteor';
+import './imports/startup/service-config.js';
 
-const mainInstance = new Main();
-mainInstance.start();
+Meteor.startup(() => {
+
+})

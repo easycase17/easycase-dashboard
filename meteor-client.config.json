@@ -6,6 +6,10 @@
     "tracker",
     "es5-shim",
     "autopublish",
-    "insecure"
+    "meteortoys:allthings",
+    "accounts-facebook",
+    "accounts-google",
+    "accounts-password",
+    "service-configuration"
   ]
 }

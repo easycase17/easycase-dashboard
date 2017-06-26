@@ -27,6 +27,24 @@ const METADATA = {
   isDevServer: helpers.isWebpackDevServer()
 };
 
+/**
+ * Meteor external settings
+ */
+function resolveExternals(context, request, callback) {
+	return resolveMeteor(request, callback) ||
+		callback();
+}
+
+function resolveMeteor(request, callback) {
+	var match = request.match(/^meteor\/(.+)$/);
+	var pack = match && match[1];
+
+	if (pack) {
+		callback(null, 'Package["' + pack + '"]');
+		return true;
+	}
+}
+
 /*
  * Webpack configuration
  *
@@ -76,6 +94,10 @@ module.exports = function(options) {
       modules: [helpers.root('client'), helpers.root('node_modules')]
 
     },
+
+    externals: [
+      resolveExternals
+    ],
 
     /*
      * Options affecting the normal modules.
