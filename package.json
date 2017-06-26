@@ -17,7 +17,7 @@
     "lint": "npm run tslint \"src/**/*.ts\"",
     "meteor:reset": "cd meteor && meteor reset",
     "meteor:run": "cd meteor && meteor --settings private/settings.json",
-    "meteor:client-bundle": "meteor-client bundle",
+    "meteor:client-bundle": "meteor-client bundle - source=meteor",
     "postversion": "git push && git push --tags",
     "postinstall": "npm run meteor.client-bundle",
     "prebuild:dev": "npm run clean:dist",

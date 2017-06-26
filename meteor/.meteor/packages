@@ -29,3 +29,4 @@ service-configuration@1.0.11
 facebook-config-ui
 google-config-ui
 dynamic-import
+ecmascript
