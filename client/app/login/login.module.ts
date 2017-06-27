@@ -4,14 +4,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Login } from './login.component';
+import { Signup } from './signup.component';
 
 export const routes = [
-  { path: '', component: Login, pathMatch: 'full' }
+  { path: '', component: Login, pathMatch: 'full' },
+  { path: 'signup', component: Signup, pathMatch: 'full' }
 ];
 
 @NgModule({
   declarations: [
-    Login
+    Login,
+    Signup
   ],
   imports: [
     CommonModule,
