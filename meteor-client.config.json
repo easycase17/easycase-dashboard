@@ -10,6 +10,8 @@
     "accounts-facebook",
     "accounts-google",
     "accounts-password",
-    "service-configuration"
+    "service-configuration",
+    "shell-server",
+    "ecmascript"
   ]
 }
