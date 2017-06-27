@@ -15,26 +15,7 @@ import { configureFacebook, configureGoogle } from '../../../meteor/server/impor
 export class Login {
   private user: string;
   private password: string;
-  constructor() {
-    
-    // @FIXME: Need to find a safe way to set the oauth services
-    // /**
-    //  * Set up account services
-    //  */
-    // var facebookConfig = Meteor.settings.private.oauth.facebook;
-    // var googleConfig = Meteor.settings.private.oauth.google;
-
-    // console.log('---------- Account Service Configuration ----------');
-    // if (facebookConfig) {
-    //     console.log('Got settings for facebook', facebookConfig)
-    //     configureFacebook(facebookConfig);
-    // }
-
-    // if (googleConfig) {
-    //     console.log('Got settings for google', googleConfig)
-    //     configureGoogle(googleConfig);
-    // }
-  }
+  constructor() { }
 
   loginWithPassword() {
     Meteor.loginWithPassword(this.user, this.password, (err) => {
@@ -49,4 +30,5 @@ export class Login {
       });
     });
   }
+
 }

@@ -1,4 +1,5 @@
 import './imports/startup/service-config.js';
+import './imports/api/users/index.js';
 
 Meteor.startup(() => {
 
