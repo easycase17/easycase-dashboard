@@ -12,11 +12,23 @@ import { Accounts } from 'meteor/accounts-base';
     }
 })
 export class Signup implements OnInit {
-    private username: string;
-    private password: string;
-    private email: string;
+    private user: {
+        username: string,
+        password: string,
+        email: string,
+        firstname: string,
+        lastname: string,
+        role: string
+    };
     constructor() {
-
+        this.user = { 
+            username: null, 
+            password: null,
+            email: null,
+            firstname: null,
+            lastname: null,
+            role: null
+        };
     }
 
     ngOnInit() {
@@ -25,14 +37,14 @@ export class Signup implements OnInit {
 
     createAccount() {
         let options = {
-            username: this.username,
-            password: this.password,
+            username: this.user.username,
+            password: this.user.password,
             profile: {
-                firstname: 'Guocheng',
-                lastname: 'Wei'
+                firstname: this.user.firstname,
+                lastname: this.user.lastname,
+                roles: [ this.user.role ],
+                emails: [  this.user.email ]
             },
-            isDefault: true,
-            roles: ['lawyer']
         };
 
         Meteor.call('createNewUser', options);

@@ -14,13 +14,22 @@
           <div class="widget-body">
             <form class="login-form mt-lg" (ngSubmit)="createAccount()">
               <div class="form-group">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username" [(ngModel)]="username">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" [(ngModel)]="user.username" required>
               </div>
               <div class="form-group">
-                <input class="form-control" id="pswd" type="password" placeholder="Password" name="password" [(ngModel)]="password">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="user.email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="email">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" [(ngModel)]="user.firstname" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" [(ngModel)]="user.lastname" required>
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="role" type="text" placeholder="Role" name="fole" [(ngModel)]="user.role" required>
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="pswd" type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required>
               </div>
               <div class="clearfix">
                 <div class="btn-toolbar float-right m-t-1">
