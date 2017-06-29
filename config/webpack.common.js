@@ -220,7 +220,8 @@ module.exports = function(options) {
        */
       new ContextReplacementPlugin(
         // The (\\|\/) piece accounts for path separators in *nix and Windows
-        /angular(\\|\/)core(\\|\/)client(\\|\/)linker/,
+        // /angular(\\|\/)core(\\|\/)client(\\|\/)linker/,
+        /angular(\\|\/)core(\\|\/)@angular/,
         helpers.root('client'), // location of your client
         {
           // your Angular Async Route paths relative to this root directory
