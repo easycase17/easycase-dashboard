@@ -8,7 +8,7 @@ const ContractsSchema = new SimpleSchema({
         type: String,
         label: 'CreaterID'
     },
-    layerId: {
+    lawyersId: {
         type: [String],
         label: 'LayerID'
     },
