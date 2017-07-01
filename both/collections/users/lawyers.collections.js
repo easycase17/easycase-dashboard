@@ -27,10 +27,11 @@ const LawyersSchema = new SimpleSchema({
         type: [String],
         label: "Areas"
     },
-    lastLog: {
-        type: Date,
-        label: "Last Log",
-    },
+    // lastLog: {
+    //     type: Date,
+    //     label: "Last Log",
+    // },
+    // This is the evaluation score for each lawyer
     evaluation: {
         type: Number,
         label: "Evaluation"

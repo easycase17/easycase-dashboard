@@ -35,3 +35,4 @@ const CasesSchema = new SimpleSchema({
 
 Cases = new Meteor.Collection('ec_cases');
 Cases.schema = CasesSchema;
+Cases.attachSchema(CasesSchema);

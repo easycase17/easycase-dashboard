@@ -31,3 +31,5 @@ google-config-ui
 dynamic-import
 ecmascript
 aldeed:simple-schema
+aldeed:collection2
+percolate:migrations

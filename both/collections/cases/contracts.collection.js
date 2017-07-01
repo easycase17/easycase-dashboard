@@ -27,3 +27,4 @@ const ContractsSchema = new SimpleSchema({
 
 Contracts = new Meteor.Collection('ec_case_contracts');
 Contracts.schema = ContractsSchema;
+Contracts.attachSchema(ContractsSchema);
