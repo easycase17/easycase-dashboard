@@ -5,8 +5,6 @@
     "reactive-var",
     "tracker",
     "es5-shim",
-    "autopublish",
-    "meteortoys:allthings",
     "accounts-facebook",
     "accounts-google",
     "accounts-password",
