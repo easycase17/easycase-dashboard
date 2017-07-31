@@ -2,7 +2,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Router }   from '@angular/router';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
-import { configureFacebook, configureGoogle } from '../../../meteor/server/imports/startup/service-config.js';
 
 @Component({
   selector: 'login',

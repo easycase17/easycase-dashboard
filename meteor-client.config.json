@@ -1,10 +1,14 @@
 {
+  "runtime": {
+    "DDP_DEFAULT_CONNECTION_URL": "http://localhost:3000"
+  },
   "import": [
     "meteor-base",
     "mongo",
     "reactive-var",
     "tracker",
     "es5-shim",
+    "accounts-base",
     "accounts-facebook",
     "accounts-google",
     "accounts-password",
