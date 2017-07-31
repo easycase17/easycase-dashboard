@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, ElementRef, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppConfig } from '../../app.config';
+import { Meteor } from 'meteor/meteor';
 declare let jQuery: any;
 
 @Component({
@@ -30,6 +31,10 @@ export class Navbar implements OnInit {
 
   onDashboardSearch(f): void {
     this.router.navigate(['/app', 'extra', 'search'], { queryParams: { search: f.value.search } });
+  }
+
+  logout(): void {
+    Meteor.logout();
   }
 
   ngOnInit(): void {

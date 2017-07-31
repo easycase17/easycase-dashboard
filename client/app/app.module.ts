@@ -17,6 +17,11 @@ import { AppState, InteralStateType } from './app.service';
 import { AppConfig } from './app.config';
 import { ErrorComponent } from './error/error.component';
 
+/**
+ * EasyCase
+ */
+import { LoggedInGuard } from './guards/loggedIn.guard'
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -47,7 +52,8 @@ type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    LoggedInGuard
   ]
 })
 export class AppModule {
